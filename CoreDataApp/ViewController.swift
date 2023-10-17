@@ -11,9 +11,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let database = Database()
+        database.deleteAll()
+        database.createPerson()
+        database.loadPersons()
+        database.loadPersonsWithChildrens()
+        database.loadPersonsSortedByAge()
+
+        database.delete(by: "David")
+        database.loadPersons()
     }
-
-
 }
-

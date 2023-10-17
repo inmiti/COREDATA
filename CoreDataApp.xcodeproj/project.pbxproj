@@ -17,6 +17,7 @@
 		1FDC4D242AD73B5300723936 /* CoreDataAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC4D232AD73B5300723936 /* CoreDataAppTests.swift */; };
 		1FDC4D2E2AD73B5300723936 /* CoreDataAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC4D2D2AD73B5300723936 /* CoreDataAppUITests.swift */; };
 		1FDC4D302AD73B5300723936 /* CoreDataAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC4D2F2AD73B5300723936 /* CoreDataAppUITestsLaunchTests.swift */; };
+		1FDC4D3D2AD7432D00723936 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC4D3C2AD7432D00723936 /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1FDC4D292AD73B5300723936 /* CoreDataAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDC4D2D2AD73B5300723936 /* CoreDataAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAppUITests.swift; sourceTree = "<group>"; };
 		1FDC4D2F2AD73B5300723936 /* CoreDataAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1FDC4D3C2AD7432D00723936 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				1FDC4D172AD73B5200723936 /* LaunchScreen.storyboard */,
 				1FDC4D1A2AD73B5200723936 /* Info.plist */,
 				1FDC4D122AD73B5000723936 /* CoreDataApp.xcdatamodeld */,
+				1FDC4D3C2AD7432D00723936 /* Database.swift */,
 			);
 			path = CoreDataApp;
 			sourceTree = "<group>";
@@ -140,12 +143,15 @@
 				1FDC4D022AD73B5000723936 /* Sources */,
 				1FDC4D032AD73B5000723936 /* Frameworks */,
 				1FDC4D042AD73B5000723936 /* Resources */,
+				1FCB51BE2ADC562B00A45A86 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CoreDataApp;
+			packageProductDependencies = (
+			);
 			productName = CoreDataApp;
 			productReference = 1FDC4D062AD73B5000723936 /* CoreDataApp.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +224,8 @@
 				Base,
 			);
 			mainGroup = 1FDC4CFD2AD73B4F00723936;
+			packageReferences = (
+			);
 			productRefGroup = 1FDC4D072AD73B5000723936 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -256,6 +264,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FCB51BE2ADC562B00A45A86 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then \nswiftlint --fix && swiftlint\nelse \n    echo \"warning: SwiftLint not instaled, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1FDC4D022AD73B5000723936 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +292,7 @@
 				1FDC4D142AD73B5000723936 /* CoreDataApp.xcdatamodeld in Sources */,
 				1FDC4D0E2AD73B5000723936 /* ViewController.swift in Sources */,
 				1FDC4D0A2AD73B5000723936 /* AppDelegate.swift in Sources */,
+				1FDC4D3D2AD7432D00723936 /* Database.swift in Sources */,
 				1FDC4D0C2AD73B5000723936 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
